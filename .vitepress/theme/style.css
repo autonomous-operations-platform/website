@@ -1,0 +1,21 @@
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #c1412d 0%, #3996f2 30%, #395ef2 100%);
+
+  --vp-home-hero-image-background-image: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(193, 65, 45, 1) 0%,
+    rgba(57, 150, 242, 1) 40%,
+    transparent 88%
+  );
+  --vp-home-hero-image-filter: blur(80px);
+}
+
+.dark {
+  --vp-home-hero-image-background-image: radial-gradient(
+    ellipse at 50% 30%,
+    rgba(193, 65, 45, 1) 0%,
+    rgba(57, 150, 242, 1) 40%,
+    transparent 88%
+  );
+}
