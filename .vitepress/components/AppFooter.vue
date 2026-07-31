@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useSidebar } from "vitepress/theme";
 import { withBase, useData } from "vitepress";
-import euSupportImg from "../../assets/img/BMWE-EU.png";
+import euSupportImg from "/assets/img/BMWE-EU.png";
 
 const { hasSidebar } = useSidebar();
 const { isDark, title, theme } = useData();
