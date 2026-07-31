@@ -3,6 +3,16 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Autonomous Operations",
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/website/assets/img/autonomous-operations-icon-color.svg",
+      },
+    ],
+  ],
   description: "Run your infrastructure autonomously.",
   base: "/website/",
   themeConfig: {
@@ -10,7 +20,7 @@ export default defineConfig({
     nav: [{ text: "Home", link: "/" }],
 
     logo: {
-      src: "./assets/img/logo/autonomous-operations-icon-color.svg",
+      src: "/assets/img/logo/autonomous-operations-icon-color.svg",
       width: 24,
       height: 24,
     },
