@@ -1,0 +1,21 @@
+{
+  "name": "autonomous-operations-platform-website",
+  "version": "1.0.0",
+  "description": "Website and documentation for Autonomous Operations Platform",
+  "homepage": "https://github.com/autonomous-operations-platform/website#readme",
+  "bugs": {
+    "url": "https://github.com/autonomous-operations-platform/website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autonomous-operations-platform/website.git"
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
