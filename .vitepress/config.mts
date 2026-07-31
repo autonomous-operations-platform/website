@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Autonomous Operations",
   description: "Run your infrastructure autonomously.",
+  base: "/website/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
