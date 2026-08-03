@@ -9,7 +9,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "/website/assets/img/logo/autonomous-operations-icon-color.svg",
+        href: "/assets/img/logo/autonomous-operations-icon-color.svg",
       },
     ],
   ],
