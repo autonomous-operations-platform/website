@@ -14,7 +14,6 @@ export default defineConfig({
     ],
   ],
   description: "Run your infrastructure autonomously.",
-  base: "/website/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "Home", link: "/" }],
