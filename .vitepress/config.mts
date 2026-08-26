@@ -1,34 +1,34 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   ignoreDeadLinks: [/^\.\/LICENSE$/, /^\.\/REUSE\.toml$/, /^\.\/AGENTS(\.md)?$/],
-  title: 'Autonomous Operations',
+  title: "Autonomous Operations",
   head: [
     [
-      'link',
+      "link",
       {
-        rel: 'icon',
-        type: 'image/svg+xml',
-        href: '/assets/img/logo/autonomous-operations-icon-color.svg',
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/assets/img/logo/autonomous-operations-icon-color.svg",
       },
     ],
   ],
-  description: 'Run your infrastructure autonomously.',
+  description: "Run your infrastructure autonomously.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: 'Home', link: '/' }],
+    nav: [{ text: "Home", link: "/" }],
 
     logo: {
-      src: '/assets/img/logo/autonomous-operations-icon-color.svg',
+      src: "/assets/img/logo/autonomous-operations-icon-color.svg",
       width: 24,
       height: 24,
     },
 
     socialLinks: [
       {
-        icon: 'github',
-        link: 'https://github.com/autonomous-operations-platform',
+        icon: "github",
+        link: "https://github.com/autonomous-operations-platform",
       },
     ],
   },
