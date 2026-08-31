@@ -4,6 +4,8 @@ SPDX-FileCopyrightText: 2026 SAP SE or an SAP affiliate company and Autonomous O
 SPDX-License-Identifier: Apache-2.0
 -->
 
+[![CodeQL Advanced](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml/badge.svg)](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml) [![REUSE status](https://api.reuse.software/badge/github.com/autonomous-operations-platform/website)](https://api.reuse.software/info/github.com/autonomous-operations-platform/website)
+
 # Autonomous Operations Website and Documentation
 
 ## About this project
