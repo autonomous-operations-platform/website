@@ -29,7 +29,7 @@ This project is open to feature requests/suggestions, bug reports etc. via [GitH
 
 ## Code of Conduct
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone. By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/SAP/.github/blob/main/CODE_OF_CONDUCT.md) at all times.
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone. By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/autonomous-operations-platform/.github/blob/main/CODE_OF_CONDUCT.md) at all times.
 
 ## Licensing
 
