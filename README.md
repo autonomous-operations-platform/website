@@ -1,8 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2026 SAP SE or an SAP affiliate company and Apeiro Autonomous Operations contributors
+SPDX-FileCopyrightText: 2026 SAP SE or an SAP affiliate company and Autonomous Operations contributors
 
 SPDX-License-Identifier: Apache-2.0
 -->
+
+[![CodeQL Advanced](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml/badge.svg)](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml) [![REUSE status](https://api.reuse.software/badge/github.com/autonomous-operations-platform/website)](https://api.reuse.software/info/github.com/autonomous-operations-platform/website)
 
 # Autonomous Operations Website and Documentation
 
@@ -27,10 +29,10 @@ This project is open to feature requests/suggestions, bug reports etc. via [GitH
 
 ## Code of Conduct
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone. By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/SAP/.github/blob/main/CODE_OF_CONDUCT.md) at all times.
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone. By participating in this project, you agree to abide by its [Code of Conduct](https://github.com/autonomous-operations-platform/.github/blob/main/CODE_OF_CONDUCT.md) at all times.
 
 ## Licensing
 
-Copyright 2026 SAP SE or an SAP affiliate company and Autonomous Operations contributors. Please see our [LICENSE](https://github.com/autonomous-operations-platform/website/blob/main/LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/autonomous-operations-website).
+Copyright 2026 SAP SE or an SAP affiliate company and Autonomous Operations contributors. Please see our [LICENSE](./LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/autonomous-operations-platform/website).
 
 <p align="center"><img alt="Federal Ministry for Economic Affairs and Energy funding logo" src="./public/assets/img/BMWE-EU.png" width="400"/></p>
