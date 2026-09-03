@@ -35,11 +35,18 @@ You are welcome to contribute code in order to fix a bug or to implement a new f
 The following rule governs code contributions:
 
 * Contributions must be licensed under the [Apache 2.0 License](./LICENSE).
-* Due to legal reasons, contributors will be asked to accept a Developer Certificate of Origin (DCO) when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
-* Contributions must follow our [guidelines on AI-generated code](https://github.com/SAP/.github/blob/main/CONTRIBUTING_USING_GENAI.md) in case you are using such tools. If you are using AI coding agents (e.g. Claude Code, OpenCode, Codex,), you must additionally follow the rules defined in [AGENTS.md](./AGENTS.md).
+* Due to legal reasons, contributors will be asked to accept a Developer Certificate of Origin (DCO) when they create the first pull request to this project. This happens in an automated fashion during the submission process. This project uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
+* Contributions must follow our [guidelines on AI-generated code](https://github.com/autonomous-operations-platform/.github/blob/main/CONTRIBUTING_USING_GENAI.md) in case you are using such tools. If you are using AI coding agents (e.g. Claude Code, OpenCode, Codex,), you must additionally follow the rules defined in [AGENTS.md](./AGENTS.md).
 
 ## Issues and Planning
 
 * We use GitHub issues to track bugs and enhancement requests.
 
 * Please provide as much context as possible when you open an issue. The information you provide must be comprehensive enough to reproduce that issue for the assignee.
+
+## Verification
+
+Run applicable project validation before requesting review.
+Projects created from this template SHOULD document build, test, lint, security, and license commands.
+
+Pull requests MUST report commands run, results, and checks not run.
