@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2026 SAP SE or an SAP affiliate company and Autonomous O
 SPDX-License-Identifier: Apache-2.0
 -->
 
-[![CodeQL Advanced](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml/badge.svg)](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml) [![REUSE status](https://api.reuse.software/badge/github.com/autonomous-operations-platform/website)](https://api.reuse.software/info/github.com/autonomous-operations-platform/website)
+[![Deploy to GitHub Pages](https://github.com/autonomous-operations-platform/website/actions/workflows/deploy.yml/badge.svg)](https://github.com/autonomous-operations-platform/website/actions/workflows/deploy.yml) [![CodeQL Advanced](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml/badge.svg)](https://github.com/autonomous-operations-platform/website/actions/workflows/codeql.yml) [![REUSE status](https://api.reuse.software/badge/github.com/autonomous-operations-platform/website)](https://api.reuse.software/info/github.com/autonomous-operations-platform/website)
 
 # Autonomous Operations Website and Documentation
 
@@ -25,7 +25,7 @@ npm run dev
 
 ## Support, Feedback, Contributing
 
-This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/autonomous-operations-platform/website/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/autonomous-operations-platform/website/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](https://github.com/autonomous-operations-platform/.github/blob/main/CONTRIBUTING.md).
 
 ## Code of Conduct
 
