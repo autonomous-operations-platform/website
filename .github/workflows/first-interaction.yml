@@ -29,14 +29,14 @@ jobs:
           repo_token: ${{ steps.app-token.outputs.token }}
           issue_message: >-
             Thank you for opening your first issue. Please read the
-            [Contribution Guidelines](https://github.com/${{ github.repository }}/blob/${{ github.event.repository.default_branch }}/CONTRIBUTING.md)
+            [Contribution Guidelines](https://github.com/autonomous-operations-platform/.github/blob/main/CONTRIBUTING.md)
             and the [project documentation](https://autonomous-operations.dev).
             If you later open a pull request, sign each commit with `git commit -s`.
             A separate Developer Certificate of Origin (DCO) check will report its
             status and instructions there.
           pr_message: >-
             Thank you for your first pull request. Please review the
-            [Contribution Guidelines](https://github.com/${{ github.repository }}/blob/${{ github.event.repository.default_branch }}/CONTRIBUTING.md)
+            [Contribution Guidelines](https://github.com/autonomous-operations-platform/.github/blob/main/CONTRIBUTING.md)
             and the [project documentation](https://autonomous-operations.dev).
             Please sign each commit with `git commit -s`. A separate Developer
             Certificate of Origin (DCO) check will report its status and instructions here.
