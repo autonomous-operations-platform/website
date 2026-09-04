@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2026 SAP SE or an SAP affiliate company and Autonomous Operations contributors
+# SPDX-FileCopyrightText: 2026 SAP SE or an SAP affiliate company and Autonomous Operations Platform contributors
 #
 # SPDX-License-Identifier: Apache-2.0
 
@@ -11,5 +11,5 @@ SPDX-PackageComment = "The code in this project may include calls to APIs (\"API
 [[annotations]]
 path = "**"
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2026 SAP SE or an SAP affiliate company and Autonomous Operations contributors"
+SPDX-FileCopyrightText = "2026 SAP SE or an SAP affiliate company and Autonomous Operations Platform contributors"
 SPDX-License-Identifier = "Apache-2.0"

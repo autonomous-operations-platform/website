@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useSidebar } from "vitepress/theme";
-import { withBase, useData } from "vitepress";
-import euSupportImg from "/assets/img/BMWE-EU.png";
+import { useSidebar } from 'vitepress/theme'
+import { withBase, useData } from 'vitepress'
+import euSupportImg from '/assets/img/BMWE-EU.png'
 
-const { hasSidebar } = useSidebar();
-const { isDark, title, theme } = useData();
-const projectName = title;
+const { hasSidebar } = useSidebar()
+const { isDark, title, theme } = useData()
+const projectName = title
 </script>
 
 <template>
@@ -17,11 +17,7 @@ const projectName = title;
           <div class="funding-image">
             <div class="funding-image-container">
               <div class="funding-image-bg"></div>
-              <img
-                :src="euSupportImg"
-                alt="EU and German government funding logos"
-                class="funding-image-src"
-              />
+              <img :src="euSupportImg" alt="EU and German government funding logos" class="funding-image-src" />
             </div>
           </div>
           <div class="funding-text">
@@ -29,10 +25,8 @@ const projectName = title;
               <strong>Funded by the European Union – NextGenerationEU.</strong>
             </p>
             <p>
-              The views and opinions expressed are solely those of the author(s)
-              and do not necessarily reflect the views of the European Union or
-              the European Commission. Neither the European Union nor the
-              European Commission can be held responsible for them.
+              The views and opinions expressed are solely those of the author(s) and do not necessarily reflect the views of the European
+              Union or the European Commission. Neither the European Union nor the European Commission can be held responsible for them.
             </p>
           </div>
         </div>
@@ -42,19 +36,14 @@ const projectName = title;
       <div class="footer-bottom">
         <div class="copyright">
           <p>
-            <strong
-              >Copyright © 2026 SAP SE or an SAP affiliate company and
-              Autonomous Operations contributors.</strong
-            >
+            <strong>Copyright © 2026 SAP SE or an SAP affiliate company and Autonomous Operations Platform contributors.</strong>
           </p>
         </div>
       </div>
 
       <!-- Row 3: Legal links (always last) -->
       <div class="footer-legal-links">
-        <a href="https://www.sap.com/about/legal/impressum-se.html">
-          Legal Disclosure
-        </a>
+        <a href="https://www.sap.com/about/legal/impressum-se.html"> Legal Disclosure </a>
       </div>
     </div>
   </footer>
