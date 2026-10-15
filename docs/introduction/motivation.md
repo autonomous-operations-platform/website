@@ -10,7 +10,7 @@ Europe has many small and mid-size, heterogeneous data centers. Demand for skill
 
 Operating a data center requires continuous human attention across the full operational spectrum: routine maintenance, capacity management, configuration changes, health monitoring, compliance reporting, and complex incident response. The volume and variety of these tasks exceed what small teams can handle consistently.
 
-The result is a data center that is as dependent on individual availability and expertise in good times — during routine operations - as it is in bad times, during incidents and outages.
+The result is a data center that is as dependent on individual availability and expertise in good times - during routine operations - as it is in bad times, during incidents and outages.
 
 ## Why existing automation falls short
 

@@ -1,4 +1,28 @@
 import { defineConfig } from "vitepress";
+import { readdirSync, readFileSync } from "fs";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+function getADRSidebarItems() {
+  const adrDir = resolve(__dirname, "../docs/adrs");
+  return readdirSync(adrDir)
+    .filter((f: string) => /^\d/.test(f) && f.endsWith(".md"))
+    .sort()
+    .map((f: string) => {
+      const slug = f.replace(/\.md$/, "");
+      const match = slug.match(/^(\d+)/);
+      const id = match ? `ADR-${match[1]}` : slug;
+      const content = readFileSync(resolve(adrDir, f), "utf-8");
+      const titleMatch = content.match(/^title:\s*(.+)$/m);
+      const title = titleMatch ? titleMatch[1].trim() : slug;
+      return {
+        text: `${id}: ${title}`,
+        link: `/docs/adrs/${slug}`,
+      };
+    });
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -24,7 +48,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Docs", link: "/docs/", activeMatch: "/docs/" },
+      { text: "Documentation", link: "/docs/", activeMatch: "/docs/" },
     ],
 
     logo: {
@@ -56,6 +80,28 @@ export default defineConfig({
             },
             { text: "Expected Outcomes", link: "/docs/introduction/outcomes" },
           ],
+        },
+        {
+          text: "Autonomous Operations Satellite",
+          collapsed: true,
+          link: "/docs/aos/",
+          items: [
+            { text: "Overview", link: "/docs/aos/overview" },
+            { text: "Architecture", link: "/docs/aos/architecture" },
+            { text: "Extensions", link: "/docs/aos/extensions" },
+            { text: "Deployment", link: "/docs/aos/deployment" },
+          ],
+        },
+        {
+          text: "Analysis and Automation Platform",
+          collapsed: true,
+          link: "/docs/aap/",
+        },
+        {
+          text: "Architecture Decision Records",
+          collapsed: true,
+          link: "/docs/adrs/",
+          items: getADRSidebarItems(),
         },
       ],
     },

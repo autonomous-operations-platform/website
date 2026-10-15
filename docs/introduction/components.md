@@ -18,7 +18,7 @@ No AI inference occurs within this execution path. The AOS executes only pre-val
 
 ## Operational Context Graph (OCG)
 
-The OCG is the **Record** component — the single source of truth for all operational data in the data center. It holds infrastructure topology, configuration baselines, real-time telemetry, historical events, runbooks, and credentials.
+The OCG is the **Record** component - the single source of truth for all operational data in the data center. It holds infrastructure topology, configuration baselines, real-time telemetry, historical events, runbooks, and credentials.
 
 The OCG applies no business logic and makes no operational decisions. Instead, it actively builds and maintains a **Semantic Network**: a live semantic model of the data center that correlates entities across all incoming data sources and versions their state over time. This _derivation-without-decision_ principle makes the OCG a shared, trustworthy foundation for all consuming systems.
 
@@ -47,6 +47,6 @@ The AAP performs:
 - **Anomaly detection** across the full telemetry history
 - **Root cause analysis** using graph-based techniques and large language models
 - **Recommendation generation** for operators to review and approve
-- **Automation generation** — converting approved recommendations into new Collectors, Observers, and Operators deployed back to the AOS
+- **Automation generation** - converting approved recommendations into new Collectors, Observers, and Operators deployed back to the AOS
 
 Because the AAP operates outside the critical execution path, its unavailability does not impair the AOS's ability to react to known incidents. The quality of its diagnostic output is entirely bounded by the quality and completeness of the telemetry it receives via the OCG.

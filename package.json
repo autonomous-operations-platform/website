@@ -1,6 +1,7 @@
 {
   "name": "@autonomous-operations-platform/website",
   "version": "1.0.0",
+  "type": "module",
   "description": "Website and documentation for Autonomous Operations Platform",
   "homepage": "https://github.com/autonomous-operations-platform/website#readme",
   "bugs": {
@@ -16,6 +17,7 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
+    "@types/node": "26.6.5",
     "vitepress": "^1.6.4"
   }
 }
