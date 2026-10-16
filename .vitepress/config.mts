@@ -82,14 +82,27 @@ export default defineConfig({
           ],
         },
         {
+          text: "Adoption Guide",
+          collapsed: true,
+          link: "/docs/adoption/",
+          items: [
+            {
+              text: "Satellite Instantiation",
+              link: "/docs/adoption/satellite-instantiation",
+            },
+            {
+              text: "Satellite Deployment",
+              link: "/docs/adoption/satellite-deployment",
+            },
+          ],
+        },
+        {
           text: "Autonomous Operations Satellite",
           collapsed: true,
           link: "/docs/aos/",
           items: [
             { text: "Overview", link: "/docs/aos/overview" },
             { text: "Architecture", link: "/docs/aos/architecture" },
-            { text: "Adoption Guide", link: "/docs/aos/adoption" },
-            { text: "Deployment", link: "/docs/aos/deployment" },
           ],
         },
         {
