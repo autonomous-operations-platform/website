@@ -72,13 +72,12 @@ export default defineConfig({
           link: "/docs/introduction/",
           items: [
             { text: "Motivation", link: "/docs/introduction/motivation" },
-            { text: "Architecture", link: "/docs/introduction/architecture" },
-            { text: "Core Components", link: "/docs/introduction/components" },
             {
               text: "Design Principles",
               link: "/docs/introduction/principles",
             },
-            { text: "Expected Outcomes", link: "/docs/introduction/outcomes" },
+            { text: "Architecture", link: "/docs/introduction/architecture" },
+            { text: "Core Components", link: "/docs/introduction/components" },
           ],
         },
         {
