@@ -6,7 +6,7 @@ title: Architecture
 
 ## React-Record-Reason
 
-![React-Record-Reason Architecture](./react-record-reason.svg)
+![React-Record-Reason Architecture](../diagrams/react-record-reason.svg)
 
 Autonomous Operations is structured according to a three-role architecture called **React-Record-Reason**. This separation of execution, knowledge, and analysis into three independent components is the central architectural decision of the system.
 
@@ -18,7 +18,7 @@ Autonomous Operations is structured according to a three-role architecture calle
 
 The AOS handles mission-critical operations. The AAP improves the AOS over time. The OCG connects them.
 
-![Overview Diagram](./architecture-overview.drawio.svg)
+![Overview Diagram](../diagrams/architecture-overview.drawio.svg)
 
 _Each component shown above is described in detail in other sections._
 
