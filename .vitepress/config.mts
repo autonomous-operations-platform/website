@@ -101,6 +101,7 @@ export default defineConfig({
           link: "/docs/aos/",
           items: [
             { text: "Overview", link: "/docs/aos/overview" },
+            { text: "Design Principles", link: "/docs/aos/design-principles" },
             { text: "Architecture", link: "/docs/aos/architecture" },
           ],
         },
