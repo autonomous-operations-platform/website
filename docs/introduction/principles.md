@@ -24,7 +24,7 @@ Static pre-trained ML artifacts that meet the same latency and auditability boun
 
 ## Improve continuously
 
-Every resolved incident and completed routine task feeds back into the system. The AAP analyzes outcomes across the entire data center, generates recommendations, and converts them into new automation - so the system becomes more capable over time without manual curation.
+Every resolved incident and completed routine task feeds back into the system. The Analysis and Automation Platform (AAP) analyzes outcomes across the entire data center, generates recommendations, and converts them into new automation - so the system becomes more capable over time without manual curation.
 
 ## Turn every human intervention into permanent automation
 
