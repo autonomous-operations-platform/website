@@ -20,7 +20,7 @@ Only signed Runtime Bundles can change the behavior of the AOS. This limits atta
 
 ## Resilience first
 
-The AOS assumes only power and a limited network connection. It avoids specialized hardware, external service calls, and runtime model updates. This lets it continue operating during infrastructure failure, network partitions, and central-system outages.
+The AOS assumes only power and a limited network connection. It avoids specialized hardware, external service calls, and runtime model updates. This enables continued operation in the event of infrastructure failures, network partitions, or an outage of central systems.
 
 Resilience also shapes the lifecycle model. There is no in-place patching of a running satellite. A corrected bundle replaces a defective one as a full atomic deployment.
 
