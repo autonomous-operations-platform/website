@@ -14,7 +14,7 @@ To eliminate runtime dependencies at the infrastructure level, the AOS runs on b
 
 ## Minimal attack surface
 
-The AOS holds credentials that grant access to infrastructure across the data center. A compromised satellite could affect the entire site. The software stack is a hardened, minimal Linux installation. A smaller stack means fewer components that can fail, be misconfigured, or be compromised.
+The AOS holds credentials that grant access to infrastructure across the data center. A compromised satellite could affect the entire site. As operating system, a hardened, minimal Linux installation is used. A reduced software stack means fewer components that can fail, be misconfigured, or be compromised.
 
 Only signed Runtime Bundles can change the behavior of the AOS. This limits attacker reach. No additional external service calls except for the defined ones and no runtime updates are allowed. 
 
