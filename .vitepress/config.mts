@@ -86,12 +86,12 @@ export default defineConfig({
           link: "/docs/adoption/",
           items: [
             {
-              text: "Satellite Instantiation",
-              link: "/docs/adoption/satellite-instantiation",
+              text: "Build Your Own Satellite",
+              link: "/docs/adoption/build-your-own-satellite",
             },
             {
-              text: "Satellite Deployment",
-              link: "/docs/adoption/satellite-deployment",
+              text: "How To Deploy",
+              link: "/docs/adoption/how-to-deploy",
             },
           ],
         },
