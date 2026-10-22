@@ -41,7 +41,7 @@ This decoupling is what lets you add, remove, or replace one component without t
 The [`autonomous-operations-satellite`](https://github.com/autonomous-operations-platform/autonomous-operations-satellite) library gives you the interfaces for these three components, the store, a registry, and an orchestrator (`satellite.Run`) that starts everything in the right order.
 You write the business logic; the framework handles subscription, ordering, and the audit trail.
 
-## Prerequisites
+## Step 1: Prerequisites
 
 1. **Install Go 1.27.1** from [go.dev/dl](https://go.dev/dl/).
 
@@ -53,7 +53,7 @@ You write the business logic; the framework handles subscription, ordering, and 
    git clone https://github.com/autonomous-operations-platform/hello-world-satellite
    ```
 
-## Step 4: Build and run
+## Step 2: Build and run
 
 From the Satellite directory, set up the workspace, vendor dependencies, and run:
 
@@ -89,5 +89,5 @@ Congratulations, you now have a complete collect-observe-act loop!
 
 ## Where to go next
 
-- **All available library methods.** See the [API reference](https://github.com/autonomous-operations-platform/autonomous-operations-satellite#api-reference) in `autonomous-operations-satellite` for the full store, filter, query, and record surface.
+- **All available library methods.** See the [satellite framework](https://github.com/autonomous-operations-platform/autonomous-operations-satellite#api-reference) in `autonomous-operations-satellite` for the full store, filter, query, and record surface.
 - **The concepts in depth.** The [Collector, Observer and Operator](../aos/overview.html#sub-components) specification pages define each component formally.
