@@ -91,3 +91,8 @@ Congratulations, you now have a complete collect-observe-act loop!
 
 - **All available library methods.** See the [satellite framework](https://github.com/autonomous-operations-platform/autonomous-operations-satellite#api-reference) in `autonomous-operations-satellite` for the full store, filter, query, and record surface.
 - **The concepts in depth.** The [Collector, Observer and Operator](../aos/overview.html#sub-components) specification pages define each component formally.
+
+## The future of satellites
+Perspectively, satellites do not need to be hand-crafted in the future.
+Instead, there will be components inside the Autonomous Operations Platform that generate a satellite
+based on the latest knowledge garnered from operations.
