@@ -20,14 +20,14 @@ The only way to update a satellite's behavior is to deploy a new Runtime Bundle.
 
 The AOS contains the following sub-components that together handle the full collect-detect-act cycle.
 
-| Sub-component | Role |
-| --- | --- |
-| **Collector** | Gathers event data from infrastructure sources and normalizes it |
-| **Observer** | Reads collected data and evaluates it against known patterns |
-| **Operator** | Executes remediation actions when the Observer identifies a known issue |
+| Sub-component                    | Role                                                                        |
+| -------------------------------- | --------------------------------------------------------------------------- |
+| **Collector**                    | Gathers event data from infrastructure sources and normalizes it            |
+| **Observer**                     | Reads collected data and evaluates it against known patterns                |
+| **Operator**                     | Executes remediation actions when the Observer identifies a known issue     |
 | **Satellite Record Store (SRS)** | Local time-series database for telemetry, analysis results, and action logs |
-| **Satellite Secret Vault** | Local credential store for the Collector and Operator |
-| **Satellite Dashboard** | Per-node web interface for direct visibility without OCG connectivity |
+| **Satellite Secret Vault**       | Local credential store for the Collector and Operator                       |
+| **Satellite Dashboard**          | Per-node web interface for direct visibility without OCG connectivity       |
 
 ## High availability
 
@@ -45,4 +45,4 @@ Standard deployments require a minimum of three instances per partition. Three n
 
 ## Data ownership
 
-Each AOS node owns its local Satellite Record Store. The OCG pulls data from each node via the Satellite Connector. The AOS never pushes data to the OCG and never reads from it during normal operation.
+Each AOS node owns its local Satellite Record Store. The OCG pulls data from each node via the Satellite Connector.
