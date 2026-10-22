@@ -12,7 +12,7 @@ The AOS implements the React tier of the [React-Record-Reason architecture](../i
 
 ## How it works
 
-A signed AOS Runtime Bundle packages all logic, credentials, and configuration before deployment. The AOS reads everything it needs from local storage. It never calls the OCG or AAP at runtime.
+A signed AOS Runtime Bundle packages all logic, credentials, and configuration before deployment. The AOS never calls the OCG or AAP at runtime. It reads everything it needs either from local storage or from a direct connection to the original data source.
 
 The only way to update a satellite's behavior is to deploy a new Runtime Bundle. This applies to logic changes, configuration changes, and credential rotation alike.
 
