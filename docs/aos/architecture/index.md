@@ -126,5 +126,5 @@ No changes to `main.go` are needed. Any `.go` file added to the component packag
 - **`ExecutionID` links logs to outcomes** — the runner generates one ID per operator invocation and binds it to the scoped `OperatorStore` passed to `Execute`. The store injects it into every `ActionLog` entry; the runner uses the same ID for both `RecordedAction` records. A `Started` record with no terminal record indicates a crash during execution.
 - **Attribute-based filtering** — `TelemetryFilter.Attributes` replaces source-specific fields. Components declare which key-value pairs they care about; the store does the matching. Identity comes from the data itself, not an out-of-band header.
 - **Subscription-time filtering** — filters are evaluated inside the store's `Add*` methods before putting anything on the channel. Unmatched records never reach the subscriber.
-- **Monotonic UUIDv7 IDs** — strictly increasing within a process and embedding the ingestion timestamp. Guarantee that cursor pagination never misses or duplicates records.
+- **Monotonic UUIDv7** — strictly increasing within a process and embedding the ingestion timestamp. Guarantee that cursor pagination never misses or duplicates records.
 - **Drop-oldest back-pressure** — full subscriber channels drop the oldest entry, not the newest, and never block writes.

@@ -13,8 +13,6 @@ An in-process pub/sub layer runs alongside the journal. When a record is written
 | Apache Doris | Durable journal for all record types |
 | Go channels  | Live delivery to active subscribers  |
 
-The architectural specification defines a two-layer store with an in-memory ring buffer as the observation window and Doris as the secondary journal. The current implementation does not include the ring buffer. The Go channel mechanism covers the observation window role for active subscribers. Ring buffer implementation is deferred; the deferred requirements are listed at the end of this document.
-
 ## Schema
 
 The SRS creates four tables in Doris at startup. All timestamps use `DATETIME(3)` (millisecond precision). All record identifiers are UUIDv7 strings stored as `VARCHAR(36)`.
