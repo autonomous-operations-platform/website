@@ -29,6 +29,14 @@ function getADRSidebarItems() {
 const config = withMermaid(
   defineConfig({
     vite: {
+      resolve: {
+        alias: [
+          {
+            find: /^.*\/VPFeature\.vue$/,
+            replacement: resolve(__dirname, "./theme/VPFeature.vue"),
+          },
+        ],
+      },
       optimizeDeps: {
         include: [
           "fastdom",

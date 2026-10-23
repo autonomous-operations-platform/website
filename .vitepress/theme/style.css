@@ -13,6 +13,40 @@
   --vp-home-hero-image-filter: blur(80px);
 }
 
+.VPFeature .title {
+  min-height: 3rem;
+}
+
+.VPFeature {
+  position: relative;
+  overflow: hidden;
+}
+
+.VPFeature::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    400px circle at var(--glow-x, -400px) var(--glow-y, -400px),
+    rgba(57, 150, 242, 0.38) 0%,
+    rgba(193, 65, 45, 0.2) 45%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.VPFeature:hover::before {
+  opacity: 1;
+}
+
+.VPFeature .box {
+  position: relative;
+  z-index: 1;
+}
+
 .dark {
   color-scheme: dark;
 

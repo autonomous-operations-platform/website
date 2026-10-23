@@ -4,26 +4,23 @@ layout: home
 
 hero:
   name: "Autonomous Operations"
-  text: "Run your infrastructure autonomously."
-  tagline: "Correlate. Detect. Decide.<br><span style='font-size: 1.5em; font-weight: 500; margin-top: 0.6em; display: inline-block;'>Available for your infrastructure soon.</span>"
+  text: "For data center operators who want to eliminate manual toil."
+  tagline: "Turn your data center into one that runs itself."
   image:
     src: "./assets/img/logo/autonomous-operations-icon-color.svg"
     alt: "Autonomous Operations logo"
 
 features:
-  - icon: 🏭
-    title: Heterogeneous infrastructure
-    details: Operates across servers, network devices, storage systems, and power infrastructure from any vendor. No single-vendor lock-in and no per-subsystem silos.
+  - icon: Zap
+    title: Faster ops, lower cost, infinite scale
+    details: Automation replaces coordination overhead. Millisecond responses, scheduled maintenance without staffing, and reusable libraries that scale to new sites.
     link: /docs/introduction/motivation
-    linkText: Why this matters
-  - icon: ⚙️
-    title: Automate everything automatable
-    details: Routine maintenance, health monitoring, configuration changes, and known incidents all run without human intervention. Automation is the default, not the exception.
-    link: /docs/introduction/principles
-    linkText: Design principles
-  - icon: 🔄
+  - icon: ShieldCheck
+    title: Resilient operations, minimal risk
+    details: Consistent execution regardless of shift or staffing. Deterministic, pre-approved actions minimize human error — blast radius scoped before every change.
+    link: /docs/introduction/architecture
+  - icon: RefreshCw
     title: Operators solve once, the system handles forever
     details: When an operator resolves a novel incident manually, the platform captures the solution and converts it into permanent automation. Every intervention makes the system more capable.
     link: /docs/introduction/principles
-    linkText: Design principles
 ---
