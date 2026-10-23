@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 720 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <clipPath id="_clip1">
+        <rect x="0" y="0" width="720" height="203"/>
+    </clipPath>
+    <g clip-path="url(#_clip1)">
+        <rect x="0" y="0" width="720" height="260" style="fill:white;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,360,26)">
+        <g transform="matrix(1,0,0,1,-123.373,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;">React-Record-Reason architecture</text>
+        </g>
+    </g>
+    <path d="M202,70C206.415,70 210,73.585 210,78L210,172C210,176.415 206.415,180 202,180L38,180C33.585,180 30,176.415 30,172L30,78C30,73.585 33.585,70 38,70L202,70Z" style="fill:rgb(232,240,254);stroke:rgb(59,111,212);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,120,96)">
+        <g transform="matrix(1,0,0,1,-17.704,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;">React</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,120,116)">
+        <g transform="matrix(1,0,0,1,-70.097,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Autonomous Operations</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,120,132)">
+        <g transform="matrix(1,0,0,1,-42.986,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Satellite (AOS)</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,120,156)">
+        <g transform="matrix(1,0,0,1,-42.792,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;">fast, deterministic</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,120,170)">
+        <g transform="matrix(1,0,0,1,-23.544,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;">execution</text>
+        </g>
+    </g>
+    <path d="M442,70C446.415,70 450,73.585 450,78L450,172C450,176.415 446.415,180 442,180L278,180C273.585,180 270,176.415 270,172L270,78C270,73.585 273.585,70 278,70L442,70Z" style="fill:rgb(230,244,234);stroke:rgb(46,139,87);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,360,96)">
+        <g transform="matrix(1,0,0,1,-22.395,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;">Record</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,360,116)">
+        <g transform="matrix(1,0,0,1,-57.811,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Operational Context</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,360,132)">
+        <g transform="matrix(1,0,0,1,-39.006,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Graph (OCG)</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,360,156)">
+        <g transform="matrix(1,0,0,1,-51.35,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;">mostly passive store;</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,360,170)">
+        <g transform="matrix(1,0,0,1,-58.693,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;">builds semantic network</text>
+        </g>
+    </g>
+    <path d="M682,70C686.415,70 690,73.585 690,78L690,172C690,176.415 686.415,180 682,180L518,180C513.585,180 510,176.415 510,172L510,78C510,73.585 513.585,70 518,70L682,70Z" style="fill:rgb(254,247,224);stroke:rgb(201,153,43);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,600,96)">
+        <g transform="matrix(1,0,0,1,-23.48,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;">Reason</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,600,116)">
+        <g>
+            <g transform="matrix(1,0,0,1,-71.186,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Analysis and</text>
+            </g>
+            <g transform="matrix(1,0,0,1,5.424,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Automation</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,600,132)">
+        <g transform="matrix(1,0,0,1,-43.342,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Platform (AAP)</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,600,156)">
+        <g transform="matrix(1,0,0,1,-43.406,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;">AI-driven analysis</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,600,170)">
+        <g transform="matrix(1,0,0,1,-30.274,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;">and learning</text>
+        </g>
+    </g>
+    <path d="M210,112L270,112" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,240,104)">
+        <g transform="matrix(1,0,0,1,-13.057,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;">writes</text>
+        </g>
+    </g>
+    <path d="M450,112L510,112" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:1.5px;"/>
+    <path d="M510,138L450,138" style="fill:none;fill-rule:nonzero;stroke:rgb(68,68,68);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,480,104)">
+        <g transform="matrix(1,0,0,1,-12.507,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;">reads</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,480,154)">
+        <g transform="matrix(1,0,0,1,-16.953,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;">insights</text>
+        </g>
+    </g>
+</svg>
