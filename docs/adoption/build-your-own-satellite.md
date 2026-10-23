@@ -4,7 +4,7 @@ title: Build Your Own Satellite
 
 # Build Your Own Satellite
 
-This guide walks you through building an Autonomous Operations Satellite from scratch.
+This guide walks you through building an Autonomous Operations Satellite (AOS) from scratch.
 At the end you will understand the concepts of Collector, Observer and Operator.
 In addition to that, you will understand how they pass data to one another through the Satellite Record Store, and how to wire them together.
 
