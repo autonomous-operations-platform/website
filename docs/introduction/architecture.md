@@ -12,7 +12,7 @@ Autonomous Operations is structured according to a three-role architecture calle
 
 | Component                                  | Role                                                                                                                        | Deployment                        |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| **Autonomous Operations Satellite (AOS)**  | Detects and remediates known issues in real-time using deterministic rules - no AI on the critical path                     | Bare-metal (always on, resilient) |
+| **Autonomous Operations Satellite (AOS)**  | Detects and remediates known issues in real-time using deterministic rules - no AI on the critical path                     | Bare-metal (always on, resilient, distributed) |
 | **Operational Context Graph (OCG)**        | Central knowledge repository: telemetry, topology, runbooks, recorded actions, and a live semantic model of the data center | Kubernetes                        |
 | **Analysis and Automation Platform (AAP)** | AI-driven root cause analysis; generates recommendations and builds new automation for the AOS                              | Kubernetes                        |
 
