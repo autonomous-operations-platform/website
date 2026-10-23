@@ -155,12 +155,6 @@ const config = withMermaid(
             collapsed: true,
             link: "/docs/aap/",
           },
-          {
-            text: "Architecture Decision Records",
-            collapsed: true,
-            link: "/docs/adrs/",
-            items: getADRSidebarItems(),
-          },
         ],
       },
     },
