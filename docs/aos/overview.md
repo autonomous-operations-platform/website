@@ -31,7 +31,7 @@ The AOS contains the following sub-components that together handle the full coll
 
 ## High availability
 
-Each AOS instance runs as a multi-node cluster. One node holds the leader role at any time. Only the leader executes actions on infrastructure. This prevents duplicate actions when multiple nodes are active simultaneously.
+Each AOS instance runs as a multi-node setup. One node holds the leader role at any time. Only the leader executes actions on infrastructure. This prevents duplicate actions when multiple nodes are active simultaneously.
 
 All nodes collect data continuously, regardless of which node leads. If the leader fails, the remaining nodes elect a new one and automation resumes. Failover does not require DNS.
 
