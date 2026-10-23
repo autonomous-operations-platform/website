@@ -37,3 +37,5 @@ This loop means the system becomes more capable over time: each resolved inciden
 ## Separation of concerns
 
 The React-Record-Reason split has a direct consequence for availability. The OCG and AAP run on Kubernetes and can be degraded or unavailable. The AOS runs on bare metal with minimal external dependencies and continues operating regardless of the state of the surrounding infrastructure. The system degrades gracefully: a degraded OCG or AAP does not impair the AOS's ability to react to incidents it already knows.
+
+Multiple AOS instances run across the data center. Each instance operates independently with no shared state. A failing instance does not affect others.
