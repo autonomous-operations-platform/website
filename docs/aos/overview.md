@@ -4,7 +4,7 @@ title: Overview
 
 # Autonomous Operations Satellite Overview
 
-The AOS is the execution engine of the Autonomous Operations platform. It ensures data center automation continues even when central systems are unavailable. It runs as self-contained, redundant instances and stays operational under adverse conditions.
+The Autonomous Operations Satellite (AOS) is the execution engine of the Autonomous Operations platform. It ensures data center automation continues even when central systems are unavailable. It runs as self-contained, redundant instances and stays operational under adverse conditions.
 
 ## Role in the platform
 
@@ -31,7 +31,7 @@ The AOS contains the following sub-components that together handle the full coll
 
 ## High availability
 
-Each AOS instance runs as a multi-node cluster. One node holds the leader role at any time. Only the leader executes actions on infrastructure. This prevents duplicate actions when multiple nodes are active simultaneously.
+Each AOS instance runs as a multi-node setup. One node holds the leader role at any time. Only the leader executes actions on infrastructure. This prevents duplicate actions when multiple nodes are active simultaneously.
 
 All nodes collect data continuously, regardless of which node leads. If the leader fails, the remaining nodes elect a new one and automation resumes. Failover does not require DNS.
 
