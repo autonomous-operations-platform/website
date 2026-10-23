@@ -18,7 +18,7 @@ The only way to update a satellite's behavior is to deploy a new Runtime Bundle.
 
 ## Sub-components
 
-The AOS contains the following sub-components that together handle the full collect-detect-act cycle.
+The AOS contains the following sub-components that together handle the full collect-observe-act cycle.
 
 | Sub-component                    | Role                                                                        |
 | -------------------------------- | --------------------------------------------------------------------------- |
