@@ -8,7 +8,7 @@ This guide walks you through building an Autonomous Operations Satellite from sc
 At the end you will understand the concepts of Collector, Observer and Operator.
 In addition to that, you will understand how they pass data to one another through the Satellite Record Store, and how to wire them together.
 
-The guide builds the [`hello-world-satellite`](github.com/autonomous-operations/hello-world-satellite) example repository step by step.
+The guide builds the [`hello-world-satellite`](https://github.com/autonomous-operations/hello-world-satellite) example repository step by step.
 If you prefer to play with the code alongside the how-to, please check out the [GETTING-STARTED](https://github.com/autonomous-operations-platform/hello-world-satellite/blob/main/GETTING-STARTED.md) in the repository.
 Our sample satellite monitors a CPU temperature sensor and controls a fan.
 It is small enough to read in one sitting and uses only the in-memory store, so you don't need any external services to run it.
@@ -180,9 +180,9 @@ func (o *TemperatureThreshold) Detect(ctx context.Context, trigger store.Telemet
 
 Points worth absorbing:
 
-- **The Observer names a pattern.** `temperature-high` describes *what was detected*. It says nothing about fans. An Operator decides what to do. This keeps detection and remediation independent.
+- **The Observer names a pattern.** `temperature-high` describes _what was detected_. It says nothing about fans. An Operator decides what to do. This keeps detection and remediation independent.
 - **Two thresholds help reduce noise.** The Observer emits `temperature-high` above 75°C and `temperature-low` below 60°C. The 15-degree gap between them is deliberate: it stops the Satellite from flapping between states when a reading hovers near a single threshold.
-- **`SourceRecordIDs` links the insight back to its evidence.** The telemetry that triggered the detection is recorded on the insight, which is what later analysis needs to explain *why* the Satellite acted.
+- **`SourceRecordIDs` links the insight back to its evidence.** The telemetry that triggered the detection is recorded on the insight, which is what later analysis needs to explain _why_ the Satellite acted.
 
 ## Step 3: Write an Operator
 
@@ -246,7 +246,7 @@ What matters here:
 - **Return an error to signal failure.** When `Execute` returns a non-nil error, the framework records the run as failed. Return `nil` only when the remediation succeeded.
 
 > The `hello-world-satellite` Operator in this folder injects a simulated 30% failure to show the failure path.
-> It is omitted above for clarity — see [`operators/fan-speed.go`](./operators/fan-speed.go) for the full version.
+> It is omitted above for clarity — see [`operators/fan-speed.go`](https://github.com/autonomous-operations-platform/hello-world-satellite/blob/main/operators/fan-speed.go) for the full version.
 
 ## Step 4: Wire it together
 
@@ -339,6 +339,7 @@ Congratulations, you now have a complete collect-observe-act loop!
 - **The concepts in depth.** The [Collector, Observer and Operator](../aos/overview.html#sub-components) specification pages define each component formally.
 
 ## The future of satellites
+
 Perspectively, satellites do not need to be hand-crafted.
 Instead, there will be components inside the Autonomous Operations Platform that generate a satellite
 based on the latest knowledge garnered from operations.
