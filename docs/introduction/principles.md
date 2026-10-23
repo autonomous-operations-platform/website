@@ -4,7 +4,7 @@ title: Design Principles
 
 # Design Principles
 
-The below principles influence the architectural decisions in Autonomous Operations.
+The below principles influence the architectural decisions in Autonomous Operations (AO).
 
 ## Extend, never modify
 
