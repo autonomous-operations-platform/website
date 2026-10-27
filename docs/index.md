@@ -10,6 +10,8 @@ Autonomous Operations correlates signals, detects anomalies, and decides on reme
 ## Where to start
 
 - New to the platform? Start with the [Introduction](./introduction/).
+- Ready to deploy? See the [Adoption](./adoption/) guide.
+- Want technical details? Read about the [Autonomous Operations Satellite](./aos/).
 
 ## Support
 
