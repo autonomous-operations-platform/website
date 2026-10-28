@@ -11,7 +11,6 @@ In addition to that, you will understand how they pass data to one another throu
 > In production, satellites are generated automatically by the Analysis and Automation Platform (AAP), reviewed by a data center engineer, and deployed without manual coding. This guide builds one by hand for demonstration purposes only.
 
 The guide builds the [`hello-world-satellite`](https://github.com/autonomous-operations/hello-world-satellite) example repository step by step.
-If you prefer to play with the code alongside the how-to, please check out the [GETTING-STARTED](https://github.com/autonomous-operations-platform/hello-world-satellite/blob/main/GETTING-STARTED.md) in the repository.
 Our sample satellite monitors a CPU temperature sensor and controls a fan.
 It is small enough to read in one sitting and uses only the in-memory store, so you don't need any external services to run it.
 
