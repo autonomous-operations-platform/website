@@ -6,7 +6,7 @@ title: Motivation
 
 ## Project context
 
-Autonomous Operations (AO) is developed by SAP as part of the [IPCEI-CIS](https://ipcei-cis.eu) initiative to strengthen European digital sovereignty by providing provider-independent cloud-to-edge infrastructure components. Within the broader [Apeiro Reference Architecture](https://apeirora.eu/), AO is the subsystem responsible for automated data center operations across heterogeneous, multi-vendor infrastructure spanning servers, network devices, storage systems, and power infrastructure, clusters and software.
+Autonomous Operations (AO) is developed by SAP as part of the [IPCEI-CIS](https://ipcei-cis.eu) initiative to strengthen European digital sovereignty by providing provider-independent cloud-to-edge infrastructure components. Within the broader [Apeiro Reference Architecture](https://apeirora.eu/), AO is the subsystem responsible for automated data center operations across heterogeneous, multi-vendor infrastructure spanning servers, network devices, storage systems, power infrastructure, clusters, and software.
 
 ## The challenge
 
