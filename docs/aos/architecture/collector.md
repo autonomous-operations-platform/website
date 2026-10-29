@@ -1,6 +1,6 @@
 # Collectors
 
-Collectors gather telemetry and log data from managed infrastructure. It collects data in four ways: pull-based streaming, pull-based batch, push-based ingestion via an OpenTelemetry Protocol (OTLP) endpoint, and active probing and monitoring.
+Collectors gather telemetry data and logs from managed infrastructure. A collector collects data in one of four ways: pull-based streaming, pull-based batch, push-based ingestion via an OpenTelemetry Protocol (OTLP) endpoint, and active probing and monitoring.
 
 It normalizes and tags each event, then writes it to the Satellite Record Store. It adapts collection volume and type based on time or events. It buffers data locally in two cases: when a data source is unreachable, and when pushed data arrives faster than it can write. This buffering ensures no data is lost before it reaches the Satellite Record Store.
 
