@@ -2,10 +2,10 @@
 
 ![Satellite Overview](../../diagrams//satellite-architecture.drawio.svg)
 
-A [Collector](./collector.md) gathers telemetry data (push- or pull-based) and writes it to the store.
-An [Observer](observer.md) subscribes to telemetry data (either all records or a subset of it using a filter).
+A [Collector](./collector.md) gathers Telemetry Data (push- or pull-based) and writes it to the store.
+An [Observer](observer.md) subscribes to Telemetry Data (either all records or a subset of it using a filter).
 When detecting a pattern, the Observer writes an Insight.
-An [Operator](operator.md) subscribes to those insights, performs corresponding actions, and writes a log of this to Recorded Actions.
+An [Operator](operator.md) subscribes to those Insights, performs corresponding actions, and writes a log of this to Recorded Actions.
 
 To reduce boilerplate code in the Collector, Observer, and Operator implementations, they are wrapped with a Runner by the framework and get a simplified interface to read/write to the Satellite Record Store.
 The components register to the framework and a runner for each is instantiated.
