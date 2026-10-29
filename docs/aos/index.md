@@ -13,3 +13,4 @@ The Autonomous Operations Satellite (AOS) is the execution engine of the Autonom
 | [Overview](./overview)                   | What the satellite is, how it stays resilient, and how to place instances across a data center |
 | [Design Principles](./design-principles) | The principles that shape every architectural decision for the AOS                             |
 | [Architecture](./architecture/)          | How the satellite is implemented                                                               |
+| [OCM Runtime Bundle](./aos-ocm-bundle)   | How the satellite is packaged and distributed using the Open Component Model                   |

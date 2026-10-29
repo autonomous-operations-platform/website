@@ -11,9 +11,8 @@ Autonomous Operations (AO) targets automated data center operations across heter
 | Page                              | What you will learn                                                                                                          |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | [Motivation](./motivation)        | Why existing automation falls short and what role AI should play                                                             |
+| [Design Principles](./principles) | The decisions that drive every architectural choice                                                                          |
 | [Architecture](./architecture)    | The React-Record-Reason design and how the three components connect                                                          |
 | [Core Components](./components)   | Autonomous Operations Satellite (AOS), Operational Context Graph (OCG), and Analysis and Automation Platform (AAP) in detail |
-| [Design Principles](./principles) | The decisions that drive every architectural choice                                                                          |
-| [Expected Outcomes](./outcomes)   | Target objectives and scope                                                                                                  |
 
 After reading this section you will have the full context needed to work with the framework details.

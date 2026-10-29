@@ -2,10 +2,10 @@
 
 ![Satellite Overview](../../diagrams//satellite-architecture.drawio.svg)
 
-A [Collector](./collector.md) gathers Telemetry Data (push- or pull-based) and writes it to the store.
-An [Observer](observer.md) subscribes to Telemetry Data (either all records or a subset of it using a filter).
-When detecting a pattern, the Observer writes an Insight.
-An [Operator](operator.md) subscribes to those Insights, performs corresponding actions, and writes a log of this to Recorded Actions.
+A [Collector](./collector.md) gathers Telemetry Data (push- or pull-based) and writes [`TelemetryRecord`](./collector.md#core-type-telemetryrecord) entries to the store.
+An [Observer](./observer.md) subscribes to those records (either all or a filtered subset).
+When detecting a pattern, the Observer writes an [`Insight`](./observer.md#core-type-insight).
+An [Operator](./operator.md) subscribes to those Insights, performs corresponding actions, and writes a log of this to Recorded Actions.
 
 To reduce boilerplate code in the Collector, Observer, and Operator implementations, they are wrapped with a Runner by the framework and get a simplified interface to read/write to the Satellite Record Store.
 The components register to the framework and a runner for each is instantiated.
@@ -16,7 +16,7 @@ The components register to the framework and a runner for each is instantiated.
 
 The [store](./srs.md) is the only communication channel between components. No component imports another. All data exchange goes through the store.
 
-Each component type receives a scoped store interface that exposes only the methods it is allowed to call. These interfaces are defined in their respective component sections below. The full `store.Store` interface — used only by runners — is shown in the [Runners](#runners) section.
+Each component type receives a scoped store interface that exposes only the methods it is allowed to call. These interfaces are defined on the [Collector](./collector.md#collector-interface), [Observer](./observer.md#observer-interface), and [Operator](./operator.md#operator-interface) pages. The full `store.Store` interface — used only by runners — is shown in the [Runners](#runners) section.
 
 ## Scoped interfaces
 
@@ -50,9 +50,9 @@ flowchart TD
     PR -->|AddRecordedAction| SRS
 ```
 
-1. **Collect** — a Collector gathers data from an external source and calls `CollectorStore.AddTelemetry` to write one or more `TelemetryRecord` entries to the store.
-2. **Detect** — an `ObserverRunner` subscribes to `TelemetryRecord` entries matching the Observer's filter. For each new record, it calls `Observer.Detect`. If the Observer finds a pattern, it calls `ObserverStore.AddInsight` directly.
-3. **Execute** — an `OperatorRunner` subscribes to `Insight` entries matching the Operator's filter. For each new Insight, it generates an `ExecutionID`, writes a `RecordedAction` with `StateStarted`, and calls `Operator.Execute`. The Operator calls `OperatorStore.AddActionLog` for each step. When `Execute` returns, the runner writes a second `RecordedAction` with `StateSuccess` or `StateFailed`.
+1. **Collect** — a Collector gathers data from an external source and calls [`CollectorStore.AddTelemetry`](./collector.md#collector-interface) to write one or more [`TelemetryRecord`](./collector.md#core-type-telemetryrecord) entries to the store.
+2. **Detect** — an `ObserverRunner` subscribes to `TelemetryRecord` entries matching the Observer's filter. For each new record, it calls [`Observer.Detect`](./observer.md#observer-interface). If the Observer finds a pattern, it calls [`ObserverStore.AddInsight`](./observer.md#observer-interface) directly.
+3. **Execute** — an `OperatorRunner` subscribes to [`Insight`](./observer.md#core-type-insight) entries matching the Operator's filter. For each new Insight, it generates an `ExecutionID`, writes a [`RecordedAction`](./operator.md#recordedaction) with `StateStarted`, and calls `Operator.Execute`. The Operator calls [`OperatorStore.AddActionLog`](./operator.md#operator-interface) for each step. When `Execute` returns, the runner writes a second `RecordedAction` with `StateSuccess` or `StateFailed`.
 
 The store interfaces are scoped/narrow interfaces of the store, as exposed to Collector, Observer, and Operator by the respective runner.
 

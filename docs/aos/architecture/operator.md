@@ -1,5 +1,7 @@
 # Operators
 
+> For more context, read the [satellite architecture documentation](./index) first.
+
 The Operator executes pre-approved remediation actions. Before acting, it re-evaluates the trigger condition against current state. It runs in a sandboxed environment with resource limits, logs every action, and rolls back on validation failure.
 
 ## Core Types

@@ -1,5 +1,7 @@
 # Observers
 
+> For more context, read the [satellite architecture documentation](./index) first.
+
 Observers evaluate data in the Satellite Record Store to detect known issue signatures. Raw telemetry does not indicate whether a condition requires action. The Observer bridges collection and remediation by applying analytical logic to identify actionable patterns. It uses rule-based patterns and static ML models, never external inference. It writes analysis results back to the store, which leads to the framework invoking Operators for remediation.
 
 ## Core type: Insight

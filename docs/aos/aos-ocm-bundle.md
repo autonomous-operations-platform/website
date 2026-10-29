@@ -94,8 +94,6 @@ OCM packaging adds two entries to the existing `autonomous-operations-satellite`
 
 ```text
 autonomous-operations-satellite/      # the autonomous-operations-satellite git repository
-├── cmd/satellite/                    # Go entry point
-├── internal/, pkg/, proto/           # Go source
 ├── ocm/
 │   ├── component-constructor.yaml    # hand-authored OCM input (see above)
 │   └── satellite.pub.pem             # public verification key (safe to commit)

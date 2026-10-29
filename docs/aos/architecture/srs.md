@@ -1,5 +1,7 @@
 # Satellite Record Store - implementation design
 
+> For more context, read the [satellite architecture documentation](./index) first.
+
 This document describes the implementation of the Satellite Record Store (SRS) in the AOS framework. It covers the storage schema, async write path, pub/sub mechanism, and the interface contract between write delivery and query availability.
 
 ## Storage layers
