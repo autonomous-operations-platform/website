@@ -11,7 +11,7 @@ The only way to deploy currently. It gives you maximum flexibility and complete
 control over maintenance of the satellite and the host system.
 
 1. Build the satellite binary (see [this example for how](https://github.com/autonomous-operations-platform/hello-world-satellite))
-    1. Install Go from go.dev/dl
+    1. Install Go from [go.dev/dl](https://go.dev/dl)
     2. Install dependencies via `go mod tidy`
     3. Build via `go build .`
 2. Copy the resulting binary to the target machine
