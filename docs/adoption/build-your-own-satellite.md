@@ -50,7 +50,7 @@ A Collector implements two methods:
 ```go
 type Collector interface {
 	Name() string
-	Setup(ctx context.Context, s store.CollectorStore)
+	Setup(ctx context.Context, logger *slog.Logger, s store.CollectorStore)
 }
 ```
 
@@ -79,7 +79,7 @@ type TemperatureCollector struct{}
 
 func (c *TemperatureCollector) Name() string { return "temperature-collector" }
 
-func (c *TemperatureCollector) Setup(ctx context.Context, s store.CollectorStore) {
+func (c *TemperatureCollector) Setup(ctx context.Context, logger *slog.Logger, s store.CollectorStore) {
 	go func() {
 		t := time.NewTicker(5 * time.Second)
 		defer t.Stop()
@@ -121,7 +121,7 @@ An Observer implements three methods:
 type Observer interface {
 	Name() string
 	Filter() store.TelemetryFilter
-	Detect(ctx context.Context, trigger store.TelemetryRecord, s store.ObserverStore) error
+	Detect(ctx context.Context, logger *slog.Logger, trigger store.TelemetryRecord, s store.ObserverStore) error
 }
 ```
 
@@ -149,7 +149,7 @@ func (o *TemperatureThreshold) Filter() store.TelemetryFilter {
 	}
 }
 
-func (o *TemperatureThreshold) Detect(ctx context.Context, trigger store.TelemetryRecord, s store.ObserverStore) error {
+func (o *TemperatureThreshold) Detect(ctx context.Context, logger *slog.Logger, trigger store.TelemetryRecord, s store.ObserverStore) error {
 	celsius, err := strconv.ParseFloat(trigger.Attributes["value"], 64)
 	if err != nil {
 		return fmt.Errorf("invalid temperature value: %w", err)
@@ -193,7 +193,7 @@ An Operator implements three methods:
 type Operator interface {
 	Name() string
 	Filter() store.InsightFilter
-	Execute(ctx context.Context, executionID store.RecordID, insight store.Insight, s store.OperatorStore) error
+	Execute(ctx context.Context, logger *slog.Logger, insight store.Insight, s store.OperatorStore) error
 }
 ```
 
@@ -213,7 +213,7 @@ func (o *FanSpeedController) Filter() store.InsightFilter {
 	return store.InsightFilter{Patterns: []string{"temperature-high", "temperature-low"}}
 }
 
-func (o *FanSpeedController) Execute(ctx context.Context, executionID store.RecordID, insight store.Insight, s store.OperatorStore) error {
+func (o *FanSpeedController) Execute(ctx context.Context, logger *slog.Logger, insight store.Insight, s store.OperatorStore) error {
 	var targetSpeed int
 	switch insight.Pattern {
 	case "temperature-high":
@@ -223,7 +223,6 @@ func (o *FanSpeedController) Execute(ctx context.Context, executionID store.Reco
 	}
 
 	s.AddActionLog(ctx, store.NewActionLog{
-		ExecutionID: executionID, // potentially subject to change in future versions
 		StepID:      "set-fan-speed",
 		Description: fmt.Sprintf("Setting fan to %d%%: %s", targetSpeed, insight.Summary),
 		State:       store.ActionLogStateAttempting,
@@ -231,7 +230,6 @@ func (o *FanSpeedController) Execute(ctx context.Context, executionID store.Reco
 
 	// Simulate calling a fan control API
 	s.AddActionLog(ctx, store.NewActionLog{
-		ExecutionID: executionID,
 		StepID:      "set-fan-speed",
 		Description: fmt.Sprintf("Fan speed set to %d%%.", targetSpeed),
 		State:       store.ActionLogStateSuccess,
@@ -243,7 +241,6 @@ func (o *FanSpeedController) Execute(ctx context.Context, executionID store.Reco
 What matters here:
 
 - **Log before you act, then log the outcome.** Write an `attempting` entry before the real work, then a `success` or `failed` entry after. If the Operator crashes mid-step, the unpaired `attempting` entry is the evidence of where it stopped.
-- **The `executionID` groups the logs.** Every action log for this insight carries the same `executionID`, so the full sequence of steps is reconstructable later.
 - **Return an error to signal failure.** When `Execute` returns a non-nil error, the framework records the run as failed. Return `nil` only when the remediation succeeded.
 
 > The `hello-world-satellite` Operator in this folder injects a simulated 30% failure to show the failure path.
@@ -299,6 +296,8 @@ Starting readers before writers guarantees no event is produced before someone i
 `satellite.Run` blocks until `ctx` is cancelled, then returns.
 
 `satellite.Run` also validates the component set and returns an error if it is invalid — for example `ErrNoCollectors` (at least one collector is required) or `ErrOperatorsWithoutObservers` (an operator with no observer to feed it).
+The validation only ensures that components exist.
+It does not check for a valid link between components, i.e. whether an observer's filter can ever yield on a collector's output.
 
 ## Step 5: Build and run
 
@@ -336,5 +335,5 @@ Congratulations, you now have a complete collect-observe-act loop!
 
 ## Where to go next
 
-- **All available library methods.** See the [satellite framework](https://github.com/autonomous-operations-platform/autonomous-operations-satellite#api-reference) in `autonomous-operations-satellite` for the full store, filter, query, and record surface.
+- **All available library methods.** See the [satellite framework](https://github.com/autonomous-operations-platform/autonomous-operations-satellite) in `autonomous-operations-satellite` for the full store, filter, query, and record surface.
 - **The concepts in depth.** The [Collector, Observer and Operator](../aos/overview.html#sub-components) specification pages define each component formally.
