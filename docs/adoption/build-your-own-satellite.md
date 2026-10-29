@@ -35,7 +35,7 @@ Four record types travel through the store.
 Records are addressed by **`RecordID`**, a monotonic UUIDv7 ID that is assigned automatically when writing to the store.
 You only need these to follow the guide:
 
-- **`TelemetryRecord`** — what a Collector writes. A that comes with an optional payload and any number of attributes.
+- **`TelemetryRecord`** — what a Collector writes. A log, trace, or metric, with an optional payload and any number of attributes.
 - **`Insight`** — what an Observer writes. A detected pattern, along with its severity and human-readable messages.
 - **`ActionLog`** — what an Operator writes for each step it takes.
 - **`RecordedAction`** — what the framework writes when an operator has terminated.
