@@ -32,7 +32,7 @@ It is small enough to read in one sitting and uses only the in-memory store, so 
 ## The data model in one minute
 
 Four record types travel through the store.
-Records are addressed by **`RecordID`**, a monotonic UUIDv7 ID assigned by the store assigns on write.
+Records are addressed by **`RecordID`**, a monotonic UUIDv7 ID that is assigned automatically when writing to the store.
 You only need these to follow the guide:
 
 - **`TelemetryRecord`** — what a Collector writes. A that comes with an optional payload and any number of attributes.
