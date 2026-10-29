@@ -20,7 +20,7 @@ AI can learn from operational history, improve automation over time, and reason 
 
 The right role for AI is therefore not **execution** but **generation**: use AI to learn from operational data and produce deterministic, human-reviewable automation - then execute only the pre-validated result. Autonomous Operations keeps AI in the offline development phase, where it generates and validates automation under human supervision, and executes only pre-validated, approved logic in production.
 
-Static pre-trained ML artifacts that meet the same latency and auditability bounds are permitted in constrained roles within the framework . Everything else is kept off the critical path.
+Static pre-trained ML artifacts that meet the same latency and auditability bounds are permitted in constrained roles within the framework. Everything else is kept off the critical path.
 
 ## Improve continuously
 
