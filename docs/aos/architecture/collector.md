@@ -65,11 +65,11 @@ type Collector interface {
 
 `Setup` is the entry point for each collector. The runner calls it once at startup and passes a `*slog.Logger` pre-scoped with `component=collector` and `name=Name()`. A push-based collector registers HTTP handlers inside `Setup`. A pull-based collector starts a scheduled task. The framework does not distinguish between the two — it calls `Setup` once and the collector decides its own ingestion mode.
 
-Scheduling and HTTP listening are utility functions, not core framework interfaces. Push-based collectors register handlers on `Mux`, the HTTP multiplexer the framework creates and serves at startup.
+Scheduling and HTTP listening are utility functions, not core framework interfaces.
 
 #### Push-based pattern
 
-For sources that send data to the satellite, `ListenOTLP` registers OTLP ingest routes on `Mux` and parses each incoming request into a `[]NewTelemetryRecord` slice. The `Signal` field is set from the endpoint (`/metrics`, `/logs`, `/traces`). The collector receives the parsed records in a `Handler` callback, enriches them as needed, and calls `s.AddTelemetry` directly.
+For sources that send data to the satellite, a utility function like `ListenOTLP` could register OTLP ingest routes on `Mux`, an HTTP multiplexer set up centrally, and parse each incoming request into a `[]NewTelemetryRecord` slice. The `Signal` field is set from the endpoint (`/metrics`, `/logs`, `/traces`). The collector receives the parsed records in a `Handler` callback, enriches them as needed, and calls `s.AddTelemetry` directly.
 
 ```go
 type F5TelemetryStreamingCollector struct{}
@@ -77,6 +77,7 @@ type F5TelemetryStreamingCollector struct{}
 func (c *F5TelemetryStreamingCollector) Name() string { return "f5-telemetry-streaming" }
 
 func (c *F5TelemetryStreamingCollector) Setup(ctx context.Context, logger *slog.Logger, s CollectorStore) {
+    // note: ListenOTLP is just for exemplary purposes but not yet shipped with the framework
     ListenOTLP(Mux, OTLPOptions{
         BasePath: "/ingest/f5",
         Handler: func(ctx context.Context, records []NewTelemetryRecord) error {
@@ -95,7 +96,7 @@ func init() { registry.RegisterCollector(&F5TelemetryStreamingCollector{}) }
 
 #### Pull-based pattern
 
-For sources the collector must query on a schedule, a library function like `ScheduleInterval` runs the given function at the configured interval and stops when `ctx` is cancelled.
+For sources the collector must query on a schedule, a library function like `ScheduleInterval` could run the given function at the configured interval and stop when `ctx` is cancelled.
 
 ```go
 type F5PoolHealthCollector struct{}
@@ -103,6 +104,7 @@ type F5PoolHealthCollector struct{}
 func (c *F5PoolHealthCollector) Name() string { return "f5-pool-health" }
 
 func (c *F5PoolHealthCollector) Setup(ctx context.Context, logger *slog.Logger, s CollectorStore) {
+    // note: ScheduleInterval is just for exemplary purposes but not yet shipped with the framework
     ScheduleInterval(ctx, 30*time.Second, func(ctx context.Context) error {
         return c.poll(ctx, s)
     })
