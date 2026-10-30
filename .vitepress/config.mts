@@ -159,9 +159,15 @@ const config = withMermaid(
             ],
           },
           {
-            text: "Analysis and Automation Platform",
+            text: "Insight and Automation Platform",
+            link: "/docs/iap/",
             collapsed: true,
-            link: "/docs/aap/",
+            items: [],
+          },
+          {
+            text: "Operational Context Graph",
+            link: "https://operational-context-graph.dev",
+            items: [],
           },
         ],
       },

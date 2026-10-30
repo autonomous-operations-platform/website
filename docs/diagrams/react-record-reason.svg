@@ -72,17 +72,12 @@
     </g>
     <g transform="matrix(1,0,0,1,600,116)">
         <g>
-            <g transform="matrix(1,0,0,1,-71.186,0)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Analysis and</text>
-            </g>
-            <g transform="matrix(1,0,0,1,5.424,0)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Automation</text>
-            </g>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;text-anchor:middle;">Insight and Automation</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,600,132)">
         <g transform="matrix(1,0,0,1,-43.342,0)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Platform (AAP)</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;">Platform (IAP)</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,600,156)">

@@ -38,15 +38,15 @@ The OCG organises its data across seven specialised components:
 The Operational Context Graph is an independent open-source project. Full documentation is available at [operational-context-graph.dev](https://operational-context-graph.dev).
 :::
 
-## Analysis and Automation Platform (AAP)
+## Insight and Automation Platform (IAP)
 
-The AAP is the **Reason** component - an AI-driven analysis engine that reads telemetry exclusively from the OCG Telemetry Store and never connects to AOS instances directly.
+The IAP is the **Reason** component - an AI-driven analysis engine that reads telemetry exclusively from the OCG Telemetry Store and never connects to AOS instances directly.
 
-The AAP performs:
+The IAP performs:
 
 - **Anomaly detection** across the full telemetry history
 - **Root cause analysis** using graph-based techniques and large language models
 - **Recommendation generation** for operators to review and approve
 - **Automation generation** - converting approved recommendations into new Collectors, Observers, and Operators deployed back to the AOS
 
-Because the AAP operates outside the critical execution path, its unavailability does not impair the AOS's ability to react to known incidents. The quality of its diagnostic output is entirely bounded by the quality and completeness of the telemetry it receives via the OCG.
+Because the IAP operates outside the critical execution path, its unavailability does not impair the AOS's ability to react to known incidents. The quality of its diagnostic output is entirely bounded by the quality and completeness of the telemetry it receives via the OCG.

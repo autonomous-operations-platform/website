@@ -8,7 +8,7 @@ Four principles drive every architectural decision for the Autonomous Operations
 
 ## Independence from external services
 
-The AOS must not rely on any service outside its own node cluster. This includes DNS, cloud APIs, the OCG, and the AAP. A signed Runtime Bundle packages all required logic, credentials, and configuration before deployment. After activation, the AOS operates entirely from local storage.
+The AOS must not rely on any service outside its own node cluster. This includes DNS, cloud APIs, the OCG, and the IAP. A signed Runtime Bundle packages all required logic, credentials, and configuration before deployment. After activation, the AOS operates entirely from local storage.
 
 To eliminate runtime dependencies at the infrastructure level, the AOS runs on bare metal only. Virtual machines and containers introduce dependencies on a hypervisor or container runtime that may themselves be faulty. Natively running on the operating system removes this additional source of error.
 

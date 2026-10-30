@@ -8,11 +8,11 @@ The Autonomous Operations Satellite (AOS) is the execution engine of the Autonom
 
 ## Role in the platform
 
-The AOS implements the React tier of the [React-Record-Reason architecture](../introduction/architecture). It executes pre-approved automation using fast, deterministic, rule-based logic. The Operational Context Graph (OCG) records data. The Analysis and Automation Platform (AAP) reasons over it. Neither is required for the AOS to act.
+The AOS implements the React tier of the [React-Record-Reason architecture](../introduction/architecture). It executes pre-approved automation using fast, deterministic, rule-based logic. The Operational Context Graph (OCG) records data. The Insight and Automation Platform (IAP) reasons over it. Neither is required for the AOS to act.
 
 ## How it works
 
-A signed AOS Runtime Bundle packages all logic, credentials, and configuration before deployment. The AOS never calls the OCG or AAP at runtime. It reads everything it needs either from local storage or from a direct connection to the original data source.
+A signed AOS Runtime Bundle packages all logic, credentials, and configuration before deployment. The AOS never calls the OCG or IAP at runtime. It reads everything it needs either from local storage or from a direct connection to the original data source.
 
 The only way to update a satellite's behavior is to deploy a new Runtime Bundle. This applies to logic changes, configuration changes, and credential rotation alike.
 
