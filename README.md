@@ -10,7 +10,7 @@ SPDX-License-Identifier: Apache-2.0
 
 ## About this project
 
-This Repository contains the Autonomous Operations Website and Documentation. This website is built using [VitePress](https://vitepress.dev/, a modern static website generator.
+This Repository contains the Autonomous Operations Website and Documentation. This website is built using [VitePress](https://vitepress.dev/), a modern static website generator.
 
 ## Requirements and Setup
 
