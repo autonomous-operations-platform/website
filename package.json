@@ -17,12 +17,12 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@types/node": "26.6.5",
+    "@types/node": "26.6.6",
     "mermaid": "^11.17.2",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "2.0.17"
   },
   "dependencies": {
-    "@lucide/vue": "1.61.0"
+    "@lucide/vue": "1.68.0"
   }
 }
