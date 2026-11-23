@@ -7,7 +7,7 @@
 * @autonomous-operations-platform/sap-dev
 
 # Repository administration
-/.github/CODEOWNERS @autonomous-operations-platform/repository-admins
+/.github/CODEOWNERS @autonomous-operations-platform/sec-ops
 
 # Continuous integration, releases, and repository automation
 /.github/workflows/ @autonomous-operations-platform/dev-ops
