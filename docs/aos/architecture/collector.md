@@ -15,10 +15,16 @@ type TelemetryRecord struct {
     ID         RecordID
     Signal     Signal            // Metrics | Logs | Traces
     ReceivedAt time.Time         // when this was stored in the SRS
+    SourceTime time.Time         // when this happened at the source
     Payload    []byte            // raw source payload
     Attributes map[string]string // normalized key-value pairs for filtering and queries
 }
 ```
+
+**SourceTime** is the time when the signal was emitted at the source, using the time of the respective system.
+`ReceivedAt`, on the other hand, uses the time on the Satellite Host.
+Collectors should not persist traces as a single TelemetryRecord but as individual spans.
+As a result, `SourceTime` should be set to the span’s source time within each record.
 
 **Payload** is the raw bytes exactly as received from the source.
 
@@ -31,6 +37,7 @@ Example — an F5OS service instance log record:
   "id": "019271a3-...",
   "signal": "logs",
   "received_at": "2026-09-15T14:23:00Z",
+  "source_time": "2026-09-15T14:22:00Z",
   "payload": "datapath-cp-proxy[11]: priority=\"Info\" msgid=0x5901000000000034 msg=\"Service Instance Update Success.\" TENANTNAME=\"tenant-1\" DOSGRP=\"[2]\" SVCGRP=\"[7]\" SVCID=22 ...",
   "attributes": {
     "service.name": "f5os",
@@ -48,9 +55,10 @@ A `Collector` gathers data from one source and writes `TelemetryRecord` entries 
 
 ```go
 type NewTelemetryRecord struct {
-    Signal     Signal
-    Payload    []byte
-    Attributes map[string]string
+  SourceTime time.Time
+  Signal     Signal
+  Payload    []byte
+  Attributes map[string]string
 }
 
 type CollectorStore interface {
